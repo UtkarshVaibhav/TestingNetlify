@@ -13,6 +13,9 @@ export const Dashboard = () => {
     }
     const [formData,setFormData]=useState(payload)
     const [list,setList]=useState([]);
+    const [page,setPage] = useState(1);
+    const [total,setTotal] = useState("");
+
     const handleChange=(e)=>{
         const {id,value,checked,type}=e.target;
         setFormData({
@@ -33,11 +36,12 @@ export const Dashboard = () => {
         .then(getData);
         setFormData(payload);
     }
-    useEffect(()=>getData(),[]);
+    useEffect(()=>getData(),[page]);
     const getData=()=>{
-        fetch(`https://my-json-server.typicode.com/UtkarshVaibhav/TestingNetlify/employeeData`)
-        .then((res)=>{            
-            return res.json()
+        fetch(`https://my-json-server.typicode.com/UtkarshVaibhav/TestingNetlify/employeeData?_page=${page}&_limit=2`)
+        .then((res)=>{      
+            setTotal(res.headers.get("X-Total-Count"));      
+            return res.json();
         })
         .then((res)=>setList(res))
         .catch((err)=>console.log(err))
@@ -46,7 +50,8 @@ export const Dashboard = () => {
     <div>
         <Form handleChange={handleChange} formData={formData} handleSubmit={handleSubmit}/>
         <hr />
-        <Output list={list}/>
+        <Output list={list} page={page} setPage={setPage} total={total} setTotal={setTotal}/>
     </div>
   )
 }
+// https://my-json-server.typicode.com/UtkarshVaibhav/TestingNetlify/employeeData

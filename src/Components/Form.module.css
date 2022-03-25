@@ -1,0 +1,18 @@
+.form_div{
+    width:fit-content;
+    margin: auto;
+    padding: 20px;
+}
+input{
+    box-shadow: 5px 10px #888888;
+    border-radius: 10px;
+    padding: 5%;
+    margin: 25px;
+}
+select{
+    box-shadow: 5px 10px #888888;
+    border-radius: 10px;
+    position: absolute;
+    padding: 3px;
+    left: 320px;
+}

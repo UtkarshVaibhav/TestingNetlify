@@ -1,9 +1,9 @@
 import React from 'react'
-
+import style from './Form.module.css'
 export const Form = ({handleChange,formData,handleSubmit}) => {
     const {username,age,address,department,salary,status}=formData;
   return (
-    <div>
+    <div className={style.form_div}>
         <form onSubmit={handleSubmit}>
             <input id="username" type="text" placeholder='Enter Name' onChange={handleChange} value={username}/>
             <br />
@@ -11,7 +11,7 @@ export const Form = ({handleChange,formData,handleSubmit}) => {
             <br />
             <input id="address" type="text" placeholder='Enter Address' onChange={handleChange} value={address}/>
             <br />
-            <label>Department
+            <label>
                 <select id="department" onChange={handleChange} value={department}>
                     <option value="">Select Department</option>
                     <option value="hr">HR</option>

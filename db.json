@@ -1,49 +1,5 @@
 {
   "employeeData": [
-    {
-      "username": "utkarsh",
-      "age": "23",
-      "address": "ranchi",
-      "department": "it",
-      "salary": "1100000",
-      "status": false,
-      "id": 1
-    },
-    {
-      "username": "Prakhar",
-      "age": "24",
-      "address": "Patna",
-      "department": "hr",
-      "salary": "1200000",
-      "status": true,
-      "id": 2
-    },
-    {
-      "username": "Sahil",
-      "age": "23",
-      "address": "Chennai",
-      "department": "it",
-      "salary": "1000000",
-      "status": false,
-      "id": 3
-    },
-    {
-      "username": "Prashant",
-      "age": "23",
-      "address": "Delhi",
-      "department": "ops",
-      "salary": "1400000",
-      "status": true,
-      "id": 4
-    },
-    {
-      "username": "Shivam",
-      "age": "24",
-      "address": "Patna",
-      "department": "hr",
-      "salary": "1200000",
-      "status": true,
-      "id": 5
-    }
+
   ]
 }
