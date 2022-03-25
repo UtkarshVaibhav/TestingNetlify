@@ -23,7 +23,7 @@ export const Dashboard = () => {
     const handleSubmit=(e)=>{
         e.preventDefault();
         const formDatajson=JSON.stringify(formData);
-        fetch('http://localhost:3001/employeeData',{
+        fetch('https://my-json-server.typicode.com/UtkarshVaibhav/ReactForm/employeeData',{
             method: "POST",
             body: formDatajson,
             headers:{
@@ -35,7 +35,7 @@ export const Dashboard = () => {
     }
     useEffect(()=>getData(),[]);
     const getData=()=>{
-        fetch(`http://localhost:3001/employeeData`)
+        fetch(`https://my-json-server.typicode.com/UtkarshVaibhav/ReactForm/employeeData`)
         .then((res)=>{            
             return res.json()
         })
