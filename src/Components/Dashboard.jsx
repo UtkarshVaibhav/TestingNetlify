@@ -23,7 +23,7 @@ export const Dashboard = () => {
     const handleSubmit=(e)=>{
         e.preventDefault();
         const formDatajson=JSON.stringify(formData);
-        fetch('https://my-json-server.typicode.com/UtkarshVaibhav/ReactForm/employeeData',{
+        fetch('https://my-json-server.typicode.com/UtkarshVaibhav/TestingNetlify/employeeData',{
             method: "POST",
             body: formDatajson,
             headers:{
@@ -35,7 +35,7 @@ export const Dashboard = () => {
     }
     useEffect(()=>getData(),[]);
     const getData=()=>{
-        fetch(`https://my-json-server.typicode.com/UtkarshVaibhav/ReactForm/employeeData`)
+        fetch(`https://my-json-server.typicode.com/UtkarshVaibhav/TestingNetlify/employeeData`)
         .then((res)=>{            
             return res.json()
         })
