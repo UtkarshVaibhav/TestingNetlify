@@ -33,7 +33,8 @@ export const Dashboard = () => {
                 "content-type":"application/json"
             }
         })
-        .then(getData);
+        .then(()=>{getData()});
+        .catch((err)=>{console.log(err)})
         setFormData(payload);
     }
     useEffect(()=>getData(),[page]);
